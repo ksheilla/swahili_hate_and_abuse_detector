@@ -11,7 +11,7 @@ A text classifier that labels Swahili social media posts as **Normal**, **Abuse*
 | **Web app** | **TODO: paste your link here → `https://YOUR-APP-NAME.streamlit.app`** |
 | **Model** | [ksheilla/swahili-hate-afroxlmr](https://huggingface.co/ksheilla/swahili-hate-afroxlmr) |
 | **Dataset** | [afrihate/afrihate](https://huggingface.co/datasets/afrihate/afrihate) (Swahili split) |
-| **Notebook** | [`notebooks/swahili_hate_afroxlmr.ipynb`](notebooks/swahili_hate_afroxlmr.ipynb) |
+| **Notebook** | [`notebooks/swahili_hate_detector.ipynb`]|
 | **Test macro-F1** | **0.899** (TF-IDF baseline: 0.877) |
 
 ---
@@ -198,8 +198,8 @@ repository with `app.py` as the file. Under **Advanced settings**, pick Python 3
 ├── app.py                        Streamlit web app
 ├── requirements.txt              web app dependencies (used by Streamlit Community Cloud)
 ├── requirements-train.txt        notebook dependencies
-├── notebooks/
-│   └── swahili_hate_afroxlmr.ipynb   data preparation, training, experiments, error analysis, deployment
+├── notebook/
+│   └── swahili_hate_detector.ipynb   data preparation, training, experiments, error analysis, deployment
 └── results/
     └── experiments.md            experiment table and discussion
 ```
