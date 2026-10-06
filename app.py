@@ -2,7 +2,6 @@ import os
 
 import streamlit as st
 import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 MODEL_ID = os.environ.get("MODEL_ID", "ksheilla/swahili-hate-afroxlmr")
 MAX_LEN = 64              # same max_length used during fine-tuning
@@ -28,6 +27,11 @@ st.set_page_config(page_title="Swahili Hate & Abuse Detector", page_icon="🛡�
 @st.cache_resource(show_spinner="Loading the model (the first load takes about a minute)...")
 def load_model():
     """Download the tokenizer and fine-tuned model once and keep them in memory."""
+    # Imported here rather than at the top of the file: when several visitors open the app at the
+    # same moment, importing transformers in parallel can fail with "cannot import name ...".
+    # st.cache_resource runs this function once and makes the other sessions wait for it.
+    from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL_ID)
     model.eval()
@@ -47,10 +51,10 @@ def use_example(text):
     st.session_state.text = text
 
 
-st.title("Swahili Hate & Abuse Detector")
+st.title("🛡️ Swahili Hate & Abuse Detector")
 st.write("Paste a Swahili social media post to classify it as **Normal**, **Abuse** or **Hate**.")
 st.caption(
-    "Content warning: this tool deals with hateful and abusive language. "
+    "⚠️ Content warning: this tool deals with hateful and abusive language. "
     "It is an assistive tool for human moderators and must not be used for automated removal."
 )
 
