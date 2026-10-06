@@ -1,0 +1,14 @@
+# Libraries used by the training notebook (notebooks/swahili_hate_afroxlmr.ipynb).
+# The web app only needs requirements.txt.
+# transformers is pinned to the version the model was saved with; Google Colab already has the rest.
+transformers==5.18.0
+torch
+datasets
+accelerate
+scikit-learn
+pandas
+numpy
+huggingface_hub
+psutil
+gradio
+streamlit==1.65.0
