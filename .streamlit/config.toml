@@ -1,2 +1,15 @@
 [server]
 fileWatcherType = "none"
+
+[theme]
+base = "dark"
+primaryColor = "#6D4EF5"
+backgroundColor = "#15172F"
+secondaryBackgroundColor = "#232650"
+textColor = "#F2F3FF"
+borderColor = "#2D3163"
+linkColor = "#A796FF"
+font = "Poppins:https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap, sans-serif"
+baseRadius = "0.75rem"
+buttonRadius = "0.75rem"
+showWidgetBorder = true
