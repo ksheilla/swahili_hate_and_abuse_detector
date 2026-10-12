@@ -8,7 +8,7 @@ A text classifier that labels Swahili social media posts as **Normal**, **Abuse*
 
 | | |
 |---|---|
-| **Web app** | `https://swahilihateandabusedetector-debkt32te8bjsywhj8vza5.streamlit.app/#swahili-hate-and-abuse-detector`** |
+| **Web app** | [`https://swahilihateandabusedetector-debkt32te8bjsywhj8vza5.streamlit.app/#swahili-hate-and-abuse-detector`] |
 | **Model** | [ksheilla/swahili-hate-afroxlmr](https://huggingface.co/ksheilla/swahili-hate-afroxlmr) |
 | **Dataset** | [afrihate/afrihate](https://huggingface.co/datasets/afrihate/afrihate) (Swahili split) |
 | **Notebook** | [`notebooks/swahili_hate_detector.ipynb`]|
